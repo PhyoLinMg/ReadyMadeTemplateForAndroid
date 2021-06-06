@@ -24,7 +24,7 @@ emit(Resource.error(data=httpException.code(),message = httpException.message ?:
 
 It is the code for observing the state of api-> in define ->choose Kotlin
 
-```
+```kotlin
 it?.let { resource ->
 when (resource.status) {
 SUCCESS -> {
@@ -42,7 +42,9 @@ LOADING -> {
 
 - Network Call Retrofit 2.6.0 Updated(Deferred Deprecated by Jake Wharton)
 
-- Dependency Injection Update(Dagger Hilt)
+- Dependency Injection Update(Dagger Hilt)(Not done yet but will come soon)
+
+- Will combine with Jetpack Compose 
 
 - Clean Architecture Pattern will be seen in [TemplateAndroid](https://github.com/PhyoLinMg/TemplateAndroid)
 
