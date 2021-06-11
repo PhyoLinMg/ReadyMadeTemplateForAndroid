@@ -46,7 +46,7 @@ interface ApiService {
                 .connectTimeout(1000000, TimeUnit.SECONDS)
                 .readTimeout(1000000, TimeUnit.SECONDS).proxy(Proxy.NO_PROXY)
                 .addInterceptor(requestInterceptor)
-                .addInterceptor(RefreshTokenInterceptor(context))
+//                .addInterceptor(RefreshTokenInterceptor(context))
                 .addInterceptor(connectivityInterceptor)
 
 

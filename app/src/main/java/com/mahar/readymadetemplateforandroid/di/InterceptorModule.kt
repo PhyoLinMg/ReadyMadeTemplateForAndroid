@@ -3,7 +3,6 @@ package com.mahar.readymadetemplateforandroid.di
 import android.content.Context
 import com.elemental.atantat.network.ConnectivityInterceptor
 import com.elemental.atantat.network.ConnectivityInterceptorImpl
-import com.elemental.templateapplication.remote.network.services.ApiService
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -12,20 +11,21 @@ import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Named
+import javax.inject.Qualifier
 import javax.inject.Singleton
-import kotlin.coroutines.coroutineContext
+
+@Qualifier
+annotation class InterceptorAnnotation
+
 
 @Module
 @InstallIn(SingletonComponent::class)
-object NetworkModule {
+@Named("ConnectivityInterceptor")
+abstract class InterceptorModule {
+    @InterceptorAnnotation
     @Singleton
-    @Provides
-    @Named("ApiService")
-    fun provideApiService(
-        @ApplicationContext context:Context,
-        @InterceptorAnnotation connectivityInterceptor: ConnectivityInterceptor
-    )=ApiService(connectivityInterceptor,context)
+    @Binds
+    abstract fun bindConnectivityInterceptor(
+        connectivityInterceptorImpl: ConnectivityInterceptorImpl
+    ): ConnectivityInterceptor
 }
-
-
-

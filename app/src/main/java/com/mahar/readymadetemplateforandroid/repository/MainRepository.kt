@@ -4,9 +4,6 @@ import android.app.Application
 import androidx.lifecycle.liveData
 import com.elemental.templateapplication.remote.network.services.ApiService
 import com.mahar.readymadetemplateforandroid.network.Resource
-import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
 import kotlinx.coroutines.Dispatchers
 import retrofit2.HttpException
 import java.net.SocketTimeoutException
