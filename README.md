@@ -42,7 +42,7 @@ LOADING -> {
 
 - Network Call Retrofit 2.6.0 Updated(Deferred Deprecated by Jake Wharton)
 
-- Dependency Injection Update(Dagger Hilt)(Not done yet but will come soon)
+- Dependency Injection Update(Dagger Hilt)(Done)
 
 - Will combine with Jetpack Compose 
 
